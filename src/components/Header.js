@@ -30,7 +30,7 @@ const Header = () => {
             photoURL: photoURL,
           })
         );
-        navigate("/browse");
+        navigate("/posts");
       } else {
         dispatch(removeUser());
         navigate("/");
@@ -39,7 +39,7 @@ const Header = () => {
     return () => unsubscribe();
   }, []);
   return (
-    <div className="absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex justify-between">
+    <div className="w-full px-8 py-2 bg-gradient-to-b from-black z-10 flex justify-between fixed top-0 left-0">
       <img className="w-44" src={LOGO} alt="netflix-logo" />
       {user && (
         <div className="flex p-2">
